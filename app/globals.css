@@ -132,3 +132,11 @@
     @apply font-sans;
   }
 }
+.fixed-blur {
+  -webkit-backdrop-filter: blur(0.5rem) !important;
+  backdrop-filter: blur(0.5rem) !important;
+}
+::view-transition-old(root), ::view-transition-new(root) {
+    animation: none;
+    mix-blend-mode: normal;
+}
