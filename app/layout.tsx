@@ -4,6 +4,7 @@ import './globals.css'
 import Navbar from '@/components/Navbar'
 import { cn } from '@/lib/utils'
 import { ThemeProvider } from '@/components/theme-provider'
+import Footer from '@/components/Footer'
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-sans' })
 
@@ -49,7 +50,8 @@ export default function RootLayout({
         >
           <main className="  overflow-hidden  w-[90%] md:w-[85%] lg:w-[80%] max-w-[1024px]  mx-auto sm:pt-28 pt-32 z-10">
             <Navbar />
-            <div className="min-h-full flex flex-col">{children}</div>
+            <div className="">{children}</div>
+            <Footer />
           </main>
         </ThemeProvider>
       </body>
