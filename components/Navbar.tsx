@@ -1,6 +1,7 @@
 'use client'
 import {
   BriefcaseBusiness,
+  FilePen,
   Home,
   Layers,
   Mail,
@@ -19,6 +20,7 @@ import { cn } from '@/lib/utils'
 import { useTheme } from 'next-themes'
 import { FaFacebook, FaGithub, FaInstagram } from 'react-icons/fa'
 import { Separator } from './ui/separator'
+import Image from 'next/image'
 
 const mobileIconSize = 27
 
@@ -31,7 +33,7 @@ const headers = [
   {
     title: 'Zapisz się',
     path: '/zapisz-sie',
-    icon: <BriefcaseBusiness size={mobileIconSize} />,
+    icon: <FilePen size={mobileIconSize} />,
   },
   {
     title: 'O nas',
@@ -110,17 +112,34 @@ const Navbar = () => {
             href={'/'}
             className={cn(
               // currentPage == '/' && 'text-white ',
-              'py-2 px-3 sm:py-2 sm:px-2 rounded-xl relative duration-300 transition-colors ',
+              'py-2 px-3 sm:py-2 sm:px-2 rounded-xl relative duration-300 transition-colors flex gap-2 items-center',
             )}
           >
-            <p className="hidden md:block font-bold text-2xl">
-              <span className="text-primary">OSK</span> Leopard
-            </p>
+            <div className="hidden md:block font-bold text-2xl ">
+              <div className="flex gap-2">
+                <Image
+                  alt="logo osk leopard"
+                  src="/logo.jpg"
+                  width={30}
+                  height={30}
+                  className="rounded-md"
+                />
+                <p>
+                  <span className="">OSK</span> Leopard
+                </p>
+              </div>
+            </div>
             <div className="hidden sm:block md:hidden">
               <Home size={20} />
             </div>
             <div className="block sm:hidden">
-              <Home size={mobileIconSize} />
+              <Image
+                alt="logo osk leopard"
+                src="/logo.jpg"
+                width={30}
+                height={30}
+                className="rounded-md"
+              />
             </div>
             {/* {'/' == currentPage && (
               <motion.div

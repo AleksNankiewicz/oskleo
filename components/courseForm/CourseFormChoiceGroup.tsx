@@ -14,18 +14,16 @@ export function CourseFormChoiceGroup() {
   return (
     <FieldGroup className="w-full max-w-xs">
       <FieldSet>
-        <FieldLegend variant="label">Compute Environment</FieldLegend>
+        <FieldLegend>Wybierz kategorię</FieldLegend>
         <FieldDescription>
-          Select the compute environment for your cluster.
+          Wybierz kategorię, w której chcesz się zapisać. Możesz wybrać tylko
+          jedną
         </FieldDescription>
         <RadioGroup defaultValue="kubernetes">
           <FieldLabel htmlFor="kubernetes-r2h">
             <Field orientation="horizontal">
               <FieldContent>
-                <FieldTitle>Kategoria A</FieldTitle>
-                <FieldDescription>
-                  Run GPU workloads on a K8s cluster.
-                </FieldDescription>
+                <FieldTitle>Kategoria B (Manual)</FieldTitle>
               </FieldContent>
               <RadioGroupItem value="kubernetes" id="kubernetes-r2h" />
             </Field>
@@ -33,10 +31,7 @@ export function CourseFormChoiceGroup() {
           <FieldLabel htmlFor="vm-z4k">
             <Field orientation="horizontal">
               <FieldContent>
-                <FieldTitle>Kategoria B</FieldTitle>
-                <FieldDescription>
-                  Access a cluster to run GPU workloads.
-                </FieldDescription>
+                <FieldTitle>Kategoria B (Automat)</FieldTitle>
               </FieldContent>
               <RadioGroupItem value="vm" id="vm-z4k" />
             </Field>

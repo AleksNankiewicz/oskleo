@@ -64,14 +64,14 @@ const headers = [
 const Footer = () => {
   return (
     <main className="mt-24 sm:py-10 pt-10 pb-2  border-t      relative">
-      <Image
+      {/* <Image
         className="sm:scale-110 scale-125 rotate-180 absolute bottom-0 pointer-events-none"
         alt="footer gradient"
         width={1440}
         height={550}
         draggable={false}
         src={'/images/HeaderGradient.png'}
-      />
+      /> */}
       <div className="flex sm:flex-row-reverse flex-col sm:items-end sm:justify-between">
         <div className="flex sm:flex-row flex-col sm:items-center justify-end sm:gap-24 gap-16 ">
           {headers.map(({ title, links }, index) => (
